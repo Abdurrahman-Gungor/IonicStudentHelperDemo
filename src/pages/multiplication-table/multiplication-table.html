@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Çarpım Tablosu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Tablo
+    </ion-card-header>
+    <ion-card-content >
+      <ion-row [innerHtml]="table">
+        
+      </ion-row>
+    </ion-card-content>   
+  </ion-card>
+</ion-content>

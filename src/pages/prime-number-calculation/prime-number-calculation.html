@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Asal Sayı Hesaplama</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" stacked>Sayı</ion-label>
+    <ion-input type="number" placeholder="Hesaplanacak sayı" [(ngModel)]="calculatingNumber" (keyup)="calculatingNumberChanged()"></ion-input>
+  </ion-item>
+  <button ion-button full (click)="calculate()" margin-top>Hesapla</button>
+  <ion-card margin-top *ngIf="isCalculated">
+    <ion-card-header>
+      {{calculatingNumber}} asal mıdır?
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="isPrimeNumber">Evet, asal sayıdır.</div>
+      <div *ngIf="!isPrimeNumber">Hayır, asal sayı değildir.</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
